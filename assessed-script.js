@@ -27,7 +27,7 @@ function displayAssessedDetails() {
 
   const details = assessedData[boeNumber];
   if (details) {
-    document.getElementById("boe_no").textContent = `${details.boe_no} / 00`;
+    document.getElementById("boe_no").textContent = `${details.boe_no}`;
     document.getElementById("status").textContent = details.status;
     document.getElementById("pdf_date").textContent = details.pdf_date;
     document.getElementById("amount").textContent = details.amount;
