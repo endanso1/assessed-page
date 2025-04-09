@@ -9,7 +9,7 @@ function generateQRCode() {
   document.getElementById("qrcode").innerHTML = "";
 
   // LOCAL TESTING: Change 'boe.html' to your local HTML output page
-  let boeUrl = `assessed.html?boe_no=${boeNumber}`;
+  let boeUrl = `https://endanso1.github.io/assessed.html?boe_no=${boeNumber}`;
 
   // Generate QR Code
   new QRCode(document.getElementById("qrcode"), {
