@@ -5,7 +5,9 @@ const assessedData = {
     status: "Assessed",
     pdf_date: "07/03/2025 17:55:31",
     amount: "3,013.56 GHS",
-    watermark: "This is a Customs Electronically Validated Entry Customs Assessment accepted by Declarant"
+    watermark: "This is a Customs Electronically Validated Entry Customs Assessment accepted by Declarant",
+    tracking:"Declaration Tracking",
+    
   }
 };
 
@@ -26,10 +28,11 @@ function displayAssessedDetails() {
   const details = assessedData[boeNumber];
   if (details) {
     document.getElementById("boe_no").textContent = `${details.boe_no} / 00`;
+    document.getElementById("status").textContent = details.status;
     document.getElementById("pdf_date").textContent = details.pdf_date;
     document.getElementById("amount").textContent = details.amount;
-    document.getElementById("status").textContent = details.status;
     document.getElementById("watermark").textContent = details.watermark;
+    document.getElementById("tracking").textContent = details.tracking;
   } 
 }
 

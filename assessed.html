@@ -4,162 +4,198 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BOE QR Code Information</title>
-    <link rel="stylesheet" href="styles.css" />
+    
     <style>
       /* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  text-align: center;
-}
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+        background-color: #ffffff;
+        text-align: center;
+      }
 
-/* Header */
-header {
-  background-color: #d2360f;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-}
+      /* Header */
+      header {
+        background-color: #c2330f;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+      }
 
-/* Logo Styling */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Adds space between logos */
-}
+      main {
+        margin-top: -20px;
+      }
 
-.logo img {
-  height: 40px;
-}
+      /* Logo Styling */
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Adds space between logos */
+        margin-left: 7px;
+        cursor: pointer;
+      }
 
-.logo img:nth-child(2) {
-  filter: brightness(0) invert(1); /* Makes the second image white */
-}
+      .logo img {
+        height: 31px;
+      }
 
-/* Bottom Layer */
-.bottom-layer {
-  height: 50px;
-  border-bottom: 1px solid black;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow */
-}
+      .logo img:nth-child(2) {
+        filter: brightness(0) invert(1); /* Makes the second image white */
+      }
 
-/* Menu Icon */
-.menu {
-  background-color: #ad1a1a;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 12px 10px; /* Reduced padding */
-}
+      /* Bottom Layer */
+      .bottom-layer {
+        height: 40px;
+        box-shadow: 0 0.5px 6px rgb(155, 152, 152); /* Stronger shadow */
+      }
 
-.menu-icon {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 1.3px;
-}
+      /* Menu Icon */
+      .menu {
+        background-color: #ad1a1a;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 18px 10px; /* Reduced padding */
+        margin: -12px -11px -10px 0;
+        cursor: pointer;
+      }
 
-/* Section Title */
-.section-title {
-  font-size: 22px;
-  font-weight: bold;
-  color: black;
-  margin-top: 20px;
-}
+      .menu-icon {
+        width: 28px;
+        height: 3.5px;
+        margin: 4px;
+        border-radius: 5px;
+      }
 
-/* Table */
-table {
-  width: 90%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  border: 1px solid #ddd;
-}
+      /* Section Title */
+      .section-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        margin-right: 5rem;
+      }
+      .section-img {
+        font-size: 15px;
+        margin-right: -5px;
+      }
+      .section-title img {
+        width: 20px;
+        height: 30px;
+        margin-bottom: -8px;
+        margin-right: -2px;
+      }
 
-th,
-td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
+      /* Table */
+      table {
+        font-size: 13px;
+        width: 90%;
+        margin: 10px auto;
+        border-collapse: collapse;
+        border: 1px solid #ddd;
+      }
 
-th {
-  background-color: #f2f2f2;
-}
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
 
-/* Proper Amount Payable Alignment */
-#amount {
-  text-align: right; /* Aligns the text properly */
-}
+      th {
+        background-color: #f5f4f4;
+      }
 
-/* Links */
-a {
-  color: #007bff;
-  text-decoration: none;
-}
+      /* Proper Amount Payable Alignment */
+      #amount {
+        text-align: right; /* Aligns the text properly */
+      }
 
-/* Red Note Text */
-.note {
-  color: red;
-  font-size: 12px;
-  margin-top: -10px;
-}
+      /* Links */
+      a {
+        color: #1a659e;
+        text-decoration: none;
+      }
+      /* #boe-number{
+        color:#007bff ;
+      } */
 
-/* Footer */
-footer {
-  margin-top: 12rem;
-  font-size: 10px;
-  font-weight: bold;
-  color: #777;
-  padding: 50px;
-}
+      /* Red Note Text */
+      .note {
+        color: red;
+        font-size: 12px;
+        margin-top: -10px;
+      }
 
+      /* Footer */
+      footer {
+        text-align: right;
+        margin-top: 8rem;
+        padding-right: 20px;
+        font-size: 10px;
+        font-weight: 540;
+        color: #777;
+      }
     </style>
   </head>
   <body>
     <!-- Header Section -->
     <header>
       <div class="logo">
-        <img src="/thumb1-removebg-preview.png" alt="ICUMS Logo" />
-        <img src="/thumb2-removebg-preview.png" alt="" />
+        <a href="https://external.unipassghana.com/login/login.do">
+          <img src="thumb1-removebg-preview.png" alt="" />
+          <img src="thumb2-removebg-preview.png" alt="Logo" />
+        </a>
       </div>
       <div class="menu">
-        <div class="menu-icon" style="background-color: red"></div>
-        <div class="menu-icon" style="background-color: yellow"></div>
-        <div class="menu-icon" style="background-color: green"></div>
-        <!-- <img src="/hamby.png" alt="" /> -->
+        <a href="https://external.unipassghana.com/login/login.do">
+          <div class="menu-icon" style="background-color: orangered"></div>
+          <div class="menu-icon" style="background-color: yellow"></div>
+          <div class="menu-icon" style="background-color: green"></div>
+        </a>
       </div>
     </header>
     <div class="bottom-layer"></div>
 
     <main>
-      <h2 class="section-title">⭕ BOE QR Code Information</h2>
+      <!-- <h2 class="section-title"><span class="section-img">⭕</span> Bill QR Code Information</h2> -->
+      <h2 class="section-title">
+        <img src="sectionImage.png" alt="" /> Bill QR Code Information
+      </h2>
 
-      <table>
+       <table>
         <tr>
           <th>BOE No.</th>
-          <td id="boe_no">Loading...</td>
+          <td id="boe_no"></td>
         </tr>
         <tr>
           <th>BOE Status</th>
-          <td id="status">Loading...</td>
+          <td id="status"></td>
         </tr>
         <tr>
-          <th>PDF Create Date</th>
-          <td id="pdf_date">Loading...</td>
+          <th>PDF Create <br>Date</th>
+          <td id="pdf_date"></td>
         </tr>
         <tr>
-          <th>Amount Payable</th>
-          <td id="amount">Loading...</td>
+          <th>Amount <br>Payable</th>
+          <td id="amount"></td>
         </tr>
         <tr>
           <th>Water Mark</th>
-          <td id="watermark">Loading...</td>
+          <td id="watermark"></td>
+        </tr>
+        <tr>
+          <th>Declaration <br>Tracking</th>
+          <td id="tracking"><a href=""></a></td>
         </tr>
       </table>
+
+     
 
       <p class="note">
         ※ Click "Declaration Tracking" for the latest BOE information.
